@@ -7,11 +7,15 @@ public class Giithub {
 	}
 	public void t ()
 	{
-		
+        		
 	}
 	
 	public void a()
 	{
 		
 	}
+
+    public void foo()
+    {
+    }
 }
