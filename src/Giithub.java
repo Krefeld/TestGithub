@@ -1,10 +1,6 @@
 import java.util.Random;
 public class Giithub {
 
-	public Giithub() {
-		//asdasdaa
-		// TODO Auto-generated constructor stub
-	}
 	private int[] feld;
 	String[] Namen;
 	public Giithub(int laenge) 
