@@ -1,17 +1,20 @@
 import java.util.Random;
-public class Giithub {
+public class Giithub 
+{
 
 	private int[] feld;
-	String[] Namen;
 	public Giithub(int laenge) 
 	{
 		feld = new int[laenge];
-	    Namen = new String[laenge];
 	}
 
 	public static void main(String[] args) 
 	{
-		Giithub t = new Giithub(10);    
+		Giithub t = new Giithub(10);
+		String [] arr = new String[10];
+		insertionsortString(arr);
+		erzeugen(arr);
+		ausgeben(arr);
 		System.out.println("Unsortiert");
 		t.erzeugen();
 		t.ausgeben();
@@ -19,6 +22,30 @@ public class Giithub {
 		System.out.println(""); 
 		t.ausgeben();
 			
+	}
+	
+	static public void erzeugen(String [] arr)
+	{
+		arr[0] = "a";
+		arr[1] = "h";
+		arr[2] = "A";
+		arr[3] = "B";
+		arr[4] = "g";
+		arr[5] = "c";
+		arr[6] = "J";
+		arr[7] = "u";
+		arr[8] = "l";
+		arr[9] = "N";
+	}
+	
+	static public void ausgeben(String [] arr)
+	{
+		for (int i=0; i<arr.length; i++)
+	    {  
+	        System.out.print(arr[i]+"  ");
+	    }
+	    System.out.println();
+	    System.out.println();
 	}
 	   public void erzeugen()
 	   {
@@ -106,6 +133,21 @@ public class Giithub {
 	          feld[j+1] = temp;
 	        }
 	    }
+	   
+	   static public void insertionsortString(String [] arr)
+	   {
+		   for (int i = 1; i<arr.length; i++)
+	       {
+	          String temp = arr[i];
+	          int j = i-1;
+	          while(arr[j].compareTo(temp)>0)
+	          {
+	              arr[j+1] = arr[j];
+	              j--;
+	          }
+	          arr[j+1] = temp;
+	        }
+	   }
 	    
 	   /**
 	    *Sortiert eine Reihung mit dem Selectionsort-Verfahren
